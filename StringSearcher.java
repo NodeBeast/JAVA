@@ -1,5 +1,5 @@
 public class StringSearcher{
-
+//
 //Take input string and convert to String[] words
   static String[] strToWordArr(String s){
     String[] wordArr = new String[s.length()];
@@ -9,7 +9,7 @@ public class StringSearcher{
     int wordNum = 0;
     String tmp;
     for(int i=0; i<s.length();i++){
-      System.out.println(s.charAt(i));
+      //System.out.println(s.charAt(i));
       if(s.charAt(i)==' '){
         end = i;
         wordLen = end-div;
@@ -22,8 +22,28 @@ public class StringSearcher{
     return wordArr;
   }
 
-  int shortestMatch(String[] wordArr, boolean[] flags){
-    //
+  void matchingStrings(String[] wordArr, String sChars){
+//sChars is a string of the 3 search characters expected
+    boolean a = false;
+    boolean b = false;
+    boolean c = false;
+    for(int i=0; i<wordArr.length;i++){
+      //Iterate through wordArr[]
+      for(int letter=0;letter<wordArr[i].length();letter++){
+        //Iterate through words, letter by letter
+        if(wordArr[i].contains(sChars.charAt(0)){
+          a = true;
+        }
+        if(wordArr[i].contains(sChars.charAt(0)){
+          b = true;
+        }
+        if(wordArr[i].contains(sChars.charAt(0)){
+          c = true;
+        }
+        System.out.println(wordArr[i]+", at i="+i+" a,b,c: "+
+        a + ", "+b+", "+c);
+      }
+    }
   return 0;
   }
 
